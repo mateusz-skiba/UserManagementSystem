@@ -1,0 +1,297 @@
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #FDFDFD;
+  color: #222924;
+  line-height: 1.3;
+}
+
+/* components */
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+button.btn {
+  border: 2px solid #5A7FFA;
+  background-color: #5A7FFA;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.16s ease;
+}
+button.btn:hover {
+  border-color: #3965F9;
+  background-color: #3965F9;
+}
+button.btn.btn-outline {
+  background-color: #FFF;
+  color: #3965F9;
+}
+button.btn.btn-outline:hover {
+  background-color: #3965F9;
+  color: #FFF;
+  border-color: #3965F9;
+}
+
+/* header */
+header {
+  background: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.02);
+  z-index: 1;
+  position: relative;
+}
+header .container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  padding: 30px 0;
+}
+header .container a {
+  display: block;
+  text-decoration: none;
+}
+header .container a h1 {
+  font-weight: 800;
+  font-size: 24px;
+  color: #2e3431;
+}
+
+/* main */
+main {
+  padding: 60px 0 80px;
+}
+main .container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  padding: 40px 40px 60px;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.02);
+}
+main .container section.content#content-add, main .container section.content#content-edit {
+  display: none;
+}
+main .container section.content .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  height: 80px;
+}
+main .container section.content .head .text .back {
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 3px;
+  margin-left: -3px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  background: none;
+  font-size: 16px;
+}
+main .container section.content .head .text .back:hover {
+  color: #3965F9;
+}
+main .container section.content .head button.btn {
+  padding: 16px 22px;
+}
+main .container section.content .wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+main .container section.content .wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+main .container section.content .wrapper table thead tr th {
+  text-align: left;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+main .container section.content .wrapper table thead tr th:first-of-type {
+  text-align: center;
+  padding-right: 8px;
+}
+main .container section.content .wrapper table tbody tr:nth-of-type(even) {
+  background-color: #fafafa;
+}
+main .container section.content .wrapper table tbody tr td {
+  padding: 11px 5px 11px 0;
+  font-size: 16px;
+}
+main .container section.content .wrapper table tbody tr td:first-of-type {
+  text-align: center;
+  padding-right: 8px;
+}
+main .container section.content .wrapper table tbody tr td:last-of-type {
+  padding-right: 0;
+}
+main .container section.content .wrapper table tbody tr td.buttons {
+  white-space: nowrap;
+  width: 1%;
+}
+main .container section.content .wrapper table tbody tr td.buttons button.btn {
+  border-radius: 4px;
+  background-color: #bbb;
+  border: none;
+  font-size: 17px;
+}
+main .container section.content .wrapper table tbody tr td.buttons button.btn.btn-edit {
+  padding: 8px 18px;
+}
+main .container section.content .wrapper table tbody tr td.buttons button.btn.btn-edit:hover {
+  background-color: #4CAF50;
+}
+main .container section.content .wrapper table tbody tr td.buttons button.btn.btn-delete {
+  padding: 8px 12px;
+}
+main .container section.content .wrapper table tbody tr td.buttons button.btn.btn-delete img {
+  height: 14px;
+  width: auto;
+  margin-bottom: -1px;
+}
+main .container section.content .wrapper table tbody tr td.buttons button.btn.btn-delete:hover {
+  background-color: #f44336;
+}
+main .container section.content .wrapper form {
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  margin: auto;
+}
+main .container section.content .wrapper form p {
+  padding-bottom: 18px;
+  font-size: 18px;
+  font-weight: 700;
+}
+main .container section.content .wrapper form label {
+  text-align: left;
+  padding-bottom: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+main .container section.content .wrapper form input {
+  height: 50px;
+  padding: 0 12px;
+  font-size: 16px;
+  margin-bottom: 18px;
+  border: 1px solid #666;
+  border-radius: 4px;
+}
+main .container section.content .wrapper form input:focus, main .container section.content .wrapper form input:active {
+  border-color: #5A7FFA;
+}
+main .container section.content .wrapper form .buttons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.popup {
+  width: 480px;
+  max-width: 90%;
+  padding: 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  z-index: 3;
+  display: none;
+}
+.popup h2 {
+  text-align: center;
+}
+.popup .buttons {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 1000px) {
+  button.btn {
+    font-size: 16px;
+  }
+  header {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.04);
+  }
+  header .container {
+    padding: 24px 0;
+  }
+  header .container a h1 {
+    font-size: 18px;
+  }
+  main {
+    padding: 0;
+  }
+  main .container {
+    width: 100%;
+    box-shadow: none;
+    padding: 40px 5%;
+  }
+  main .container section.content .head {
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  main .container section.content .head button.btn {
+    padding: 12px 18px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  main .container section.content .wrapper table {
+    margin-top: 10px;
+  }
+  main .container section.content .wrapper table thead tr th {
+    padding-bottom: 16px;
+    padding-right: 25px;
+    font-size: 16px;
+  }
+  main .container section.content .wrapper table thead tr th:first-of-type {
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  main .container section.content .wrapper table tbody tr td {
+    padding-right: 25px;
+  }
+  main .container section.content .wrapper table tbody tr td:first-of-type {
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  main .container section.content .wrapper table tbody tr td:last-of-type {
+    padding-right: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
